@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/airTickets">
+
+    <fragment
+        android:id="@+id/airTickets"
+        android:name="com.trifcdr.airtickets.presentation.fragments.tickets.TicketsFragment"
+        android:label="fragment_tickets"
+        tools:layout="@layout/fragment_flights">
+
+        <action
+            android:id="@+id/action_airTickets_to_arrivalDialog"
+            app:destination="@id/arrivalDialog" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/hotelsFragment"
+        android:name="com.trifcdr.airtickets.presentation.fragments.hotels.HotelsFragment"
+        android:label="fragment_tickets"
+        tools:layout="@layout/fragment_hotels">
+    </fragment>
+    <fragment
+        android:id="@+id/shortlyFragment"
+        android:name="com.trifcdr.airtickets.presentation.fragments.shortly.ShortyFragment"
+        android:label="fragment_tickets"
+        tools:layout="@layout/fragmnet_shortly">
+    </fragment>
+    <fragment
+        android:id="@+id/subscriptionFragment"
+        android:name="com.trifcdr.airtickets.presentation.fragments.subscribes.SubscribeFragment"
+        android:label="fragment_tickets"
+        tools:layout="@layout/fragment_subscribes">
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.trifcdr.airtickets.presentation.fragments.profile.ProfileFragment"
+        android:label="fragment_tickets"
+        tools:layout="@layout/fragment_profile">
+    </fragment>
+
+    <dialog
+        android:id="@+id/arrivalDialog"
+        android:name="com.trifcdr.airtickets.presentation.dialogs.ArrivalDialog"
+        tools:layout="@layout/dialog_arrival">
+        <argument
+            android:name="from"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_arrivalDialog_to_searchFlights"
+            app:destination="@id/searchFlights" />
+        <action
+            android:id="@+id/action_arrivalDialog_to_anywhereFragment"
+            app:destination="@id/anywhereFragment" />
+        <action
+            android:id="@+id/action_arrivalDialog_to_difficultFragment"
+            app:destination="@id/difficultFragment" />
+        <action
+            android:id="@+id/action_arrivalDialog_to_weekendsFragment"
+            app:destination="@id/weekendsFragment" />
+        <action
+            android:id="@+id/action_arrivalDialog_to_hotTicketsFragment"
+            app:destination="@id/hotTicketsFragment" />
+
+    </dialog>
+    <fragment
+        android:id="@+id/searchFlights"
+        android:name="com.trifcdr.airtickets.presentation.fragments.search.SearchFragment"
+        android:label="search_tickets"
+        tools:layout="@layout/fragment_search">
+        <argument
+            android:name="where"
+            app:argType="string" />
+        <argument
+            android:name="from"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_searchFlights_to_allTicketsFragment"
+            app:destination="@id/allTicketsFragment" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/allTicketsFragment"
+        android:name="com.trifcdr.airtickets.presentation.fragments.allTickets.AllTicketsFragment"
+        android:label="AllTicketsFragment"
+        tools:layout="@layout/fragment_tickets">
+        <action
+            android:id="@+id/action_allTicketsFragment_to_searchFlights"
+            app:destination="@id/searchFlights"/>
+        <argument
+            android:name="where"
+            app:argType="string" />
+        <argument
+            android:name="from"
+            app:argType="string" />
+        <argument
+            android:name="date"
+            app:argType="string" />
+        <argument
+            android:name="passengers"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/weekendsFragment"
+        android:name="com.trifcdr.airtickets.presentation.fragments.weekends.WeekendsFragment"
+        android:label="WeekendsFragment" >
+        <action
+            android:id="@+id/action_weekendsFragment_to_arrivalDialog"
+            app:destination="@id/arrivalDialog" />
+    </fragment>
+    <fragment
+        android:id="@+id/difficultFragment"
+        android:name="com.trifcdr.airtickets.presentation.fragments.difficult.DifficultFragment"
+        android:label="DifficultFragment" >
+        <action
+            android:id="@+id/action_difficultFragment_to_arrivalDialog"
+            app:destination="@id/arrivalDialog" />
+    </fragment>
+    <fragment
+        android:id="@+id/hotTicketsFragment"
+        android:name="com.trifcdr.airtickets.presentation.fragments.hotTickets.HotTicketsFragment"
+        android:label="HotTicketsFragment" >
+        <action
+            android:id="@+id/action_hotTicketsFragment_to_arrivalDialog"
+            app:destination="@id/arrivalDialog" />
+    </fragment>
+    <fragment
+        android:id="@+id/anywhereFragment"
+        android:name="com.trifcdr.airtickets.presentation.fragments.anywhere.AnywhereFragment"
+        android:label="AnywhereFragment" >
+        <action
+            android:id="@+id/action_anywhereFragment_to_arrivalDialog"
+            app:destination="@id/arrivalDialog" />
+    </fragment>
+
+</navigation>
+

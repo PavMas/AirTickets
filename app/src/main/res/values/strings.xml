@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Air Tickets</string>
+    <string name="tickets">Авиабилеты</string>
+    <string name="preview_text">Поиск дешевых авиабилетов</string>
+    <string name="hint_from">Откуда - Москва</string>
+    <string name="hint_where">Куда - Турция</string>
+    <string name="str_flyaway">Музыкально отлететь</string>
+    <string name="hot_tickets">Горячие билеты</string>
+    <string name="where">Куда угодно</string>
+    <string name="difficult_trip">Сложный маршрут</string>
+    <string name="stambul">Стамбул</string>
+    <string name="popular_trip">Популярное направление</string>
+    <string name="sochi">Сочи</string>
+    <string name="phiket">Пхукет</string>
+    <string name="straight_flight">Прямые рейсы</string>
+    <string name="show_all">Показать все</string>
+    <string name="show_all_tickets">Посмотреть все билеты</string>
+    <string name="plus_back">+ обратно</string>
+    <string name="_1">1, эконом</string>
+    <string name="filter">фильтр</string>
+    <string name="price_graph">График цен</string>
+    <string name="filter_uppercase">Фильтр</string>
+    <string name="ticket_separator"> / </string>
+    <string name="has_ho_transfer">Без пересадок</string>
+    <string name="fill_all">Заполните все поля</string>
+    <string name="back">Назад</string>
+    <string name="hotels">Отели</string>
+    <string name="shortly">Короче</string>
+    <string name="subscribes">Подписки</string>
+    <string name="profile">Профиль</string>
+    <string name="show_all_places">Показать все места</string>
+</resources>

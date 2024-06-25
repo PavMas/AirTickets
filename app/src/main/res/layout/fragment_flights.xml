@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:text="@string/preview_text"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="122dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp">
+
+        <RelativeLayout
+            android:id="@+id/f"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/finder_background"
+            android:elevation="4dp" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/some_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:background="@drawable/finder_foreground"
+            android:elevation="4dp">
+
+            <View
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/ic_magnifier" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/et_from"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/hint_from"
+                    android:textColorHint="#9F9F9F"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#5E5F61" />
+
+                <EditText
+                    android:id="@+id/et_where"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:hint="@string/hint_where"
+                    android:textColorHint="#9F9F9F"
+                    android:textSize="16sp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="35dp"
+        android:text="@string/str_flyaway"
+        android:textColor="@color/white"
+        android:textSize="22sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/proposal_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:orientation="horizontal" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_background"
+        android:text="@string/show_all_places"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="italic" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+
